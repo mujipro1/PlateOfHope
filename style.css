@@ -1,8 +1,19 @@
 body{
+    background-color: #4a4949;
+    /* background: linear-gradient(10deg, rgba(78, 78, 78, 0.5), rgbrgba(43, 43, 43, 0.5); */
     font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
 }
  
+.outerContainer{
+    width: 96%;
+    top: 20px;
+    left: 2%;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 2px 0px 10px 0px #000000;
+}
+
 section{
     width:100vw;
     height:100vh;
@@ -58,7 +69,8 @@ section .container h1{
 
 .navbar .nav-link{
     font-size: 18px;
-    margin-left: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
     position: relative;
     color: #ffffffc1;
     /* add a hovering transition of changing color */
@@ -70,7 +82,7 @@ section .container h1{
 }
 
 .navbar .nav-link.active{
-    color: rgb(255, 255, 255);
+    color: #fff700;
     font-weight:600;
 }
 
@@ -139,4 +151,19 @@ section .container h1{
         margin-left: 10%;
         font-size: larger;
     }
+}
+
+.cards{
+    background-color: #b8b8b8bf;
+}
+
+
+.card{
+    box-shadow: 1px 3px 15px #4a4949;
+}
+
+.infoBar{
+    background-color: #fff700;
+    height: 30vh;
+    width: 100vw;
 }
