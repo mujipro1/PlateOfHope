@@ -1,30 +1,22 @@
+.c1{
+    margin-top: 20px ;
+    left: 20px;
+}
+
 body{
     background-color: #4a4949;
-    /* background: linear-gradient(10deg, rgba(78, 78, 78, 0.5), rgbrgba(43, 43, 43, 0.5); */
-    font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
-}
- 
-.outerContainer{
-    width: 96%;
-    top: 20px;
-    left: 2%;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 2px 0px 10px 0px #000000;
 }
 
 section{
-    width:100vw;
-    height:100vh;
-    overflow: hidden;
-    font-family:Ubuntu;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 100vh;
 }
 
+*{
+    font-family: Ubuntu;
+}
+
+/* Background Image */
 .bg-img{
     z-index: -1;
     position: absolute;
@@ -35,30 +27,9 @@ section{
     object-fit: cover;
     object-position: center;
 }
+/* background Image ends */
 
-section .container h1{
-    position: relative;
-    text-align: center;
-    font-size:50px ;
-    color: white;
-    letter-spacing: 3px;
-    text-shadow: 0 0 10px #000;
-    /* add on load animation of texxt size getting bigger and opacity increasing */
-    animation-name: text;   
-    animation: text 5s 1;
-    animation-fill-mode: forwards;
-    animation-delay: 0.6s;
-
-}
-
-@keyframes text{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
+/* navbar */
 
 .navbar{
     position: absolute;
@@ -90,21 +61,8 @@ section .container h1{
     max-height: 40px;
 }
 
-@media (min-width: 992px){
-    section .container h1{
-        font-size: 60px;
-        letter-spacing: 10px;
-    }
-}
 
-@media (max-width: 767px) {
-    .navbar .navbar-brand img {
-        min-width: 500px;
-        height: auto;
-    }
-  }
-
-  .navbar .navbar-toggler{
+.navbar .navbar-toggler{
     border:none !important;
     outline: none !important;
     box-shadow: none !important; 
@@ -133,37 +91,65 @@ section .container h1{
     display: none;
   }
 
-.textInfo{
+/* navbar ends */
+
+
+/* Welcome Text */
+
+.welcomeText{
+    position: absolute;
+    top: 45%;
+    left: 33%;
+    color: white;
     display: inline-block;
-    width: 40%;
-    margin-left: 10%;
+    font-size: 2.5rem;
+    animation-name: text;   
+    animation: text 5s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.6s;
+
 }
 
-.apply{
-    display: inline-block;
-    width: 80%;
-    margin-left: 10%;
-}
-
-@media(min-width: 767px){
-    .textInfo{
-        width: 80%;
-        margin-left: 10%;
-        font-size: larger;
+@keyframes text{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 
-.cards{
-    background-color: #b8b8b8bf;
+@media (max-width: 767px){
+    .welcomeText{
+        left: 20%;
+        top: 45%;
+    }
 }
 
+@media (max-width: 575px){
+    .welcomeText{
+        font-size: 1.55rem;
+    }
+}
+/* Welcome Text ends */
 
+
+/* Cards start */
+
+.cards{
+    /* background-color: #b8b8b8bf; */
+    background: linear-gradient(45deg, #575735, #f8ed2ce0, #6c6c22);
+    padding-top: 2%;
+}
 .card{
     box-shadow: 1px 3px 15px #4a4949;
+    /* margin: 20px; */
+}
+.card:hover{
+    box-shadow: 1px 3px 20px 10px #eeff00;;
 }
 
-.infoBar{
-    background-color: #fff700;
-    height: 30vh;
-    width: 100vw;
+.cardrow{
+    margin: 20px 0px;
 }
+/* cards end */

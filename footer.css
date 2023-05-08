@@ -32,6 +32,7 @@ footer {
 }
 .fa:hover:not(#chevron) {
   background-color: #fff700;
+  box-shadow: 1px 1px 5px 2px yellow;
   color: black;
 }
 .fa-facebook {
@@ -56,7 +57,7 @@ footer {
   height: 0;
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
-  border-bottom: 40px solid #fff700;
+  border-bottom: 40px solid #c0ba00;
   margin-top: 40px;
   bottom : 10px;
 }
@@ -72,10 +73,14 @@ footer {
   margin-top: 20px;
 }
 .triangle-up:hover {
-  border-bottom: 40px solid #908b00;
+  border-bottom: 40px solid #fff700;
   cursor: pointer;
 }
 
 #chevron{
   color:rgb(0, 0, 0);
+}
+
+.footerSec{
+  height: 30vh;
 }
