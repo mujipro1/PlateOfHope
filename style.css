@@ -4,10 +4,9 @@
 }
 
 body{
-    background-color: #4a4949;
+    background-color: #424024;
     overflow-x: hidden;
 }
-
 section{
     min-height: 100vh;
 }
@@ -106,7 +105,7 @@ section{
     animation-name: text;   
     animation: text 5s 1;
     animation-fill-mode: forwards;
-    animation-delay: 0.6s;
+    animation-delay: 0.2s;
 
 }
 
@@ -153,3 +152,45 @@ section{
     margin: 20px 0px;
 }
 /* cards end */
+
+/* Info Container starts */
+.infoContainer{
+    background:linear-gradient(20deg, #119689, #0e3c46, #625a31);
+    color: #fff;
+    min-height: 90vh;
+    margin: 3%;
+    border-radius: 25px;
+    box-shadow: 1px 1px 10px #1e1e1e;
+}
+.infoRow{
+    border-radius: 25px;
+    min-height: 90vh;
+    overflow: hidden;
+}
+#infoPara{
+    background: linear-gradient(-40deg, #6f6f6f, #333333, #636363);
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    text-align: center;
+    text-shadow: 1px 1px 4px  #000000;
+}
+.sepDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: large;
+    text-shadow: 1px 1px 4px  #000000;
+    padding: 3%;
+}
+.sepRow{
+    min-height: 37vh;
+}
+/* Info Container ends */
