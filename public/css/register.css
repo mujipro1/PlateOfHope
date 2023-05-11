@@ -1,0 +1,101 @@
+/* Register Page CSS */
+body {
+    background: linear-gradient(45deg, #262626, #9b9b97, #262626);
+}
+
+.navbar {
+    background-color: #141414;
+}
+
+.formDiv {
+    background-color: #e5dead;
+    margin: 8% 0%;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 12px 7px 10px #464646;
+}
+
+.blocks {
+    position: relative;
+}
+
+.picCont {
+    background-size: cover;
+    border-radius: 20px 0px 0px 20px;
+    margin: 8% 0%;
+    min-height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    text-align: center;
+    box-shadow: 12px 7px 10px #464646;
+    text-shadow: 1px 1px 4px #000000;
+}
+
+.label{
+    padding: 5px 20px;
+    margin: 0px 1px;
+    border-radius: 5px 5px 0px 0px;
+    background-color: white;
+}
+.in{
+    padding: 3px 10px;
+}
+
+.rowbg {
+    padding: 4px 2px;
+    background-color: white;
+    margin: 0px 1px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+/* Login Page CSS */
+#feedback {
+    height: 220px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+  }
+
+#feedback:focus {
+    box-shadow: 0 0 0px 4px #5a95c67a;
+    outline: none;
+    border-color: #9ecaed;
+}
+
+.btn {
+    margin-top: 20px;
+    font-size: 20px;
+    height: 45px;
+    width: 60%;
+}
+
+.picCont2 {
+  background-size: cover;
+  border-radius: 20px 0px 0px 20px;
+  margin: 2% 0%;
+  min-height: 100%;
+  color: white;
+  padding: 10%;
+  text-align: center;
+  text-shadow: 1px 1px 4px #000000;
+  box-shadow: 12px 7px 10px #464646;
+}
+
+.contactBg{
+  background-color: #e5dead;
+  border-radius: 0px 25px 25px 0px;
+  box-shadow: 12px 7px 10px #464646;
+}
+
+.division{
+  margin-top: 10%;
+}
+
+.bi{
+  font-size: x-large;
+  font-weight: 600;
+}
