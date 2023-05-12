@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
     <link href="{{asset('css/footer.css')}}" rel="stylesheet">
     <link href="{{asset('css/login.css')}}" rel="stylesheet">
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="{{asset('img/favIcon2.png')}}">
     <title>Plate of Hope</title>
 </head>

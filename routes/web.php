@@ -28,3 +28,9 @@ Route::get('/assistance', 'App\Http\Controllers\UserController@index')->name('as
 Route::get('/RegVolunteer', 'App\Http\Controllers\UserController@index')->name('RegVolunteer');
 
 Route::get('/RegAssistance', 'App\Http\Controllers\UserController@index')->name('RegAssistance');
+
+Route::post('/logins', 'AuthController@login')->name('login');
+
+Route::get('/test', function () {
+    return view('assistance');
+});

@@ -1,0 +1,40 @@
+.c1{
+    margin-top: 20px ;
+    left: 20px;
+}
+
+*{
+    font-family: Ubuntu;
+}
+
+body{
+    background: linear-gradient(45deg, #95968d, #dcdbc6e0, #c5c889e0, #98cba9e0);
+    overflow-x: hidden;
+}
+section{
+    min-height: 100vh;
+}
+
+
+/* Dashboard */
+
+.dashboard{
+    margin-top: 10vh;
+    color: white;
+    /* background-color: #2a2a2a60; */
+    /* background-color: #0035e381; */
+    background: linear-gradient(45deg, rgba(112, 94, 13, 0.915),  rgba(197, 165, 24, 0.915),rgba(232, 207, 63, 0.779), rgb(210, 164, 11));
+    box-shadow: 0px 2px 7px  #8b8b8b;
+    border-radius: 15px;
+    border: 1px solid #fffd71;
+    text-shadow:1px 1px 4px  #4a4a4a;
+}
+
+.bottom{
+    margin-top: 4vh;    
+    min-height: 100vh;
+    /* margin-bottom: 10vh; */
+    width: 100%;
+    left: 0;
+    background-color: rgba(84, 84, 59, 0.659);
+}

@@ -6,13 +6,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
     <link href="{{asset('css/footer.css')}}" rel="stylesheet">
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('css/home.css')}}" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="{{asset('img/favIcon2.png')}}">
     <title>Plate of Hope</title>
 </head>
 <body>
-
-    <div class="c1">
+    
+     <div class="c1">
         <section id='sec1'>
             <img src="{{asset('img/background.png')}}" alt="bg" class="bg-img">
             <div class="container">
