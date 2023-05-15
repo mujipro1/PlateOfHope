@@ -24,8 +24,8 @@
                 <div class='col-md-12'>
                     <div class='row'>
                         <div class='col-md-12'>
-                            <h1 class=' pt-4 px-5'>Hassan Ahmad</h1>
-                            <div class=' pb-4 col-md-12 px-5'>St#10, Model Village Tarlai, Isb</div>
+                            <h1 class=' pt-4 px-5'>{{$beneficiary->first_name}} {{$beneficiary->last_name}}</h1>
+                            <div class=' pb-4 col-md-12 px-5'>{{$beneficiary->address}}</div>
                         </div>
                     </div>
                 </div>            

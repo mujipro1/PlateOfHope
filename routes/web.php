@@ -21,16 +21,21 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/volunteer', 'App\Http\Controllers\UserController@index')->name('volunteer');
-
-Route::get('/assistance', 'App\Http\Controllers\UserController@index')->name('assistance');
-
-Route::get('/RegVolunteer', 'App\Http\Controllers\UserController@index')->name('RegVolunteer');
-
-Route::get('/RegAssistance', 'App\Http\Controllers\UserController@index')->name('RegAssistance');
-
-Route::post('/logins', 'AuthController@login')->name('login');
-
-Route::get('/test', function () {
-    return view('assistance');
+Route::get('/RegVolunteer', function () {
+    return view('register');
 });
+
+Route::get('/RegAssistance', function () {
+    return view('register');
+});
+
+Route::group(['middleware' => 'inactivity'], function () {
+    Route::get('/volunteer', 'App\Http\Controllers\UserController@index')->name('volunteer');
+    Route::get('/assistance', 'App\Http\Controllers\UserController@index')->name('assistance');
+});
+
+Route::post('/login-auth', 'App\Http\Controllers\UserController@login')->name('login-auth');
+
+Route::post('/submit-form', 'App\Http\Controllers\FeedBackController@store')->name('submit-form');
+
+Route::post('/new-reg', 'App\Http\Controllers\RegisterController@store')->name('new-reg');

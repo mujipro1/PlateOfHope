@@ -104,3 +104,13 @@ button {
 .register p a:hover {
     text-decoration: underline;
 }
+.alert{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+}
+
+.alert.show{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}

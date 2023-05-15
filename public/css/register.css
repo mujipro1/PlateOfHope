@@ -106,3 +106,17 @@ section{
   font-size: x-large;
   font-weight: 600;
 }
+.alert{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+}
+
+.alert.show{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.city-dropDown:nth-child(1){
+    color:rgb(95, 95, 95);
+}

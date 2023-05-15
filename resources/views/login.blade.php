@@ -11,7 +11,8 @@
     <title>Plate of Hope</title>
 </head>
 <body>
-
+    
+    
     <div class="c1">
         <img src="{{asset('img/background.png')}}" alt="bg" class="bg-img">
         <div class="container">
@@ -20,25 +21,49 @@
             </div>
         </div>
         
-    <div class='container'>
+        @if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+
+        @if(session('regAssistance'))
+        <div class="alert alert-success">
+            {{ session('regAssistance') }}
+        </div>
+        @endif
+
+        @if(session('regVolunteer'))
+        <div class="alert alert-success">
+            {{ session('regVolunteer') }}
+        </div>
+        @endif
+        
+
+        <div class='container'>
             <div class="row">
         <section>
             <div class="form-box">
-                <form action="">
+                <form class="loginForm" action="{{route('login-auth')}}" method='post'>
+                    @CSRF
                     <h2>Login</h2>
                     <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="text" required>
+                        <input name='email' type="text" required>
                         <label for="">Email</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" required>
+                        <input name='password' type="password" required>
                         <label for="">Password</label>
                     </div>
-                    <button>Log in</button>
+                    <button type='submit' >Log in</button>
                     <div class="register">
-                        <p>Don't have a account <a id="RegLink" href="#">Register</a></p>
+                        <p>Don't have an account? <a id="RegLink" href="#">Register</a></p>
                     </div>
                 </form>
             </div>
@@ -49,20 +74,40 @@
     <footer></footer>
     </div>
     
+
 </body>
 <script src="{{asset('js/header.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-// document.getElementById('contact').classList.add('active')
+
+document.addEventListener('DOMContentLoaded', function() {
+    var errorMessage = document.querySelector('.alert');
+
+    errorMessage.classList.add('show');
+
+    var duration = 3000; 
+    setTimeout(function() {
+        errorMessage.classList.remove('show');
+
+        setTimeout(function() {
+            errorMessage.style.display = 'none';
+        }, 500); 
+    }, duration);
+});
+
 const url = window.location.href.split('/');
-const view = url[url.length - 1];
+view = url[url.length - 1];
+view = view.replace('#', '');
 document.getElementById(view).classList.add('active');
+form = document.querySelector('.loginForm')
 
 if (view == 'volunteer') {
     document.getElementById("RegLink").href = "/RegVolunteer";
+    form.innerHTML += `<input type="hidden" name="role" id='role' value='volunteer'>`;
 }
 else if (view == 'assistance') {
     document.getElementById("RegLink").href = "/RegAssistance";
+    form.innerHTML += `<input type="hidden" name="role" id='role' value='beneficiary'>`;
 }
 </script>
 

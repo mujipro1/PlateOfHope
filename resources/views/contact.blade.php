@@ -48,21 +48,22 @@
                         </header>
 
                         <div class="container my-2  w-70 p-2">
-                            <form class="row g-3 p-3">
+                            <form class="row g-3 p-3" action="{{route('submit-form')}}" method='post'>
+                                @CSRF 
                                 <div class="col-md-12 ">
-                                    <input type="text" class="form-control" id="validationDefault01" required
+                                    <input name='firstname' type="text" class="form-control" id="validationDefault01" required
                                         placeholder="First name">
                                 </div>
                                 <div class="col-md-12 ">
                                     <input type="text" class="form-control" id="validationDefault01" required
-                                        placeholder="Last name">
+                                        placeholder="Last name" name='lastname'>
                                 </div>
                                 <div class="col-md-12 ">
                                     <input type="email" class="form-control" id="validationDefault01" required
-                                        placeholder="Email">
+                                        placeholder="Email" name='email'>
                                 </div>
                                 <div class="col-md-12 ">
-                                    <input type="tel" class="form-control" id="validationDefault01" required
+                                    <input  name='phone' type="tel" class="form-control" id="validationDefault01" required
                                         placeholder="Phone Number">
                                 </div>
                                 <div class="col-md-12">
@@ -70,7 +71,7 @@
                                         required></textarea>
                                 </div>
                                 <div class="d-flex mt-3 justify-content-center">
-                                    <button type="button" class="btn btn-primary">Submit</button>
+                                    <button class="btn btn-primary" type='submit'>Submit</button>
                                 </div>
 
                             </form>
