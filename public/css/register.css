@@ -1,6 +1,6 @@
 /* Register Page CSS */
 body {
-    background: linear-gradient(45deg, #676863, #a6a598e0, #b0c08fe0);
+    background-color: #1d1d1d;
 
 }
 
@@ -17,7 +17,7 @@ section{
 }
 
 .formDiv {
-    background-color: #e5dead;
+    background-color: #4d4e50;
     margin: 8% 0%;
     border-radius: 0px 20px 20px 0px;
 }
@@ -39,6 +39,28 @@ section{
     padding: 10%;
     text-align: center;
     text-shadow: 1px 1px 4px #000000;
+}
+
+textarea{
+    border: none;
+    background-color: #878787;
+    color: white;
+    /* place holder color */
+   
+}
+
+.form-control{
+    background-color: #878787;
+    color: white;
+    border: none;
+    :placeholder {
+        color: white;
+    };
+}
+
+.form-control:focus{
+    background-color: #878787;
+    color: white;
 }
 
 .label{
@@ -64,20 +86,28 @@ section{
     width: 100%;
     border-radius: 8px;
     padding: 10px;
-    border: 1px solid #cccccc;
-  }
-
-#feedback:focus {
-    box-shadow: 0 0 0px 4px #5a95c67a;
-    outline: none;
-    border-color: #9ecaed;
 }
 
-.btn {
-    margin-top: 20px;
-    font-size: 20px;
-    height: 45px;
-    width: 60%;
+#feedback:focus {
+    box-shadow: 0 0 0px 4px #254257;
+    outline: none;
+    border-color: #254257;
+}
+
+.submitBtn{
+    width: 160px;
+    margin: 10px;
+    height: 50px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    border: 1px solid rgb(255, 217, 0);
+    color: rgb(255, 217, 0);
+}
+
+.submitBtn:hover{
+    background-color: rgb(255, 217, 0);
+    color: black;
 }
 
 .picCont2 {
@@ -89,13 +119,12 @@ section{
   padding: 10%;
   text-align: center;
   text-shadow: 1px 1px 4px #000000;
-  box-shadow: 12px 7px 10px #464646;
 }
 
 .contactBg{
-  background-color: #e5dead;
+  background-color: #4d4e50;
+  color:white;
   border-radius: 0px 25px 25px 0px;
-  box-shadow: 12px 7px 10px #464646;
 }
 
 .division{
@@ -118,5 +147,12 @@ section{
 }
 
 .city-dropDown:nth-child(1){
-    color:rgb(95, 95, 95);
+    background-color: #878787;
+    color: white;
+    border: none;
+}
+
+.salary{
+    background-color: #878787;
+    color: white;
 }

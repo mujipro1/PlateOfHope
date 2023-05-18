@@ -38,7 +38,7 @@
                         </div>
                         <div class="division d3">
                             <p class="bi">General Support</p>
-                            <p>plateofhope@gmail.com</p>
+                            <p id="gmail">plateofhope@gmail.com</p>
                         </div>
                     </div>
 
@@ -71,7 +71,7 @@
                                         required></textarea>
                                 </div>
                                 <div class="d-flex mt-3 justify-content-center">
-                                    <button class="btn btn-primary" type='submit'>Submit</button>
+                                    <button class="btn submitBtn" type='submit'>Submit</button>
                                 </div>
 
                             </form>

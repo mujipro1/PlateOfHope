@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\FeedBack;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', function () {
-    return view('home');
+    $feedbacks = FeedBack::orderBy('feedback_id', 'desc')->take(4)->get();
+    return view('home', compact('feedbacks'));
 });
 
 Route::get('/contact', function () {
@@ -32,10 +34,30 @@ Route::get('/RegAssistance', function () {
 Route::group(['middleware' => 'inactivity'], function () {
     Route::get('/volunteer', 'App\Http\Controllers\UserController@index')->name('volunteer');
     Route::get('/assistance', 'App\Http\Controllers\UserController@index')->name('assistance');
+    Route::get('/ngoLogin', 'App\Http\Controllers\UserController@index')->name('ngoLogin');
 });
 
+Route::get('/ngoRegistration', function(){
+    return view('registerNGO');
+});
+
+Route::get('/test', function(){
+    return view('ngo');
+});
+
+Route::get('/logout', 'App\Http\Controllers\UserController@logout')->name('logout');
+Route::get('/-logout', 'App\Http\Controllers\UserController@logoutV')->name('-logout');
+Route::get('/logoutNGO', 'App\Http\Controllers\UserController@logoutN')->name('logoutNGO');
+
+Route::post('/ngoReg-auth', 'App\Http\Controllers\NGOController@register')->name('ngoReg-auth');
+
 Route::post('/login-auth', 'App\Http\Controllers\UserController@login')->name('login-auth');
-
 Route::post('/submit-form', 'App\Http\Controllers\FeedBackController@store')->name('submit-form');
-
 Route::post('/new-reg', 'App\Http\Controllers\RegisterController@store')->name('new-reg');
+Route::post('/new-donation', 'App\Http\Controllers\NGOController@donation')->name('new-donation');
+
+Route::post('/cityNGOsV', 'App\Http\Controllers\UserController@updateCityV')->name('cityNGOsV');
+Route::post('/cityNGOsA', 'App\Http\Controllers\UserController@updateCityA')->name('cityNGOsA');
+
+
+Route::post('/applyfor', 'App\Http\Controllers\NGOController@applyFor')->name('applyFor');

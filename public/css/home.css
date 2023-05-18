@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: #3f3f3f;
+    background-color: #1d1d1d;
     overflow-x: hidden;
 }
 section{
@@ -13,6 +13,12 @@ section{
 
 *{
     font-family: Ubuntu;
+}
+
+.ngoC{
+    object-fit: cover;
+    object-position: center;
+    background-size: 100%;
 }
 
 /* Welcome Text */
@@ -55,18 +61,36 @@ section{
 
 /* Cards start */
 .cards{
-    background: linear-gradient(45deg, #1d1d1d, #859492e0, #2b3431);
-    padding-top: 2%;
+    background: linear-gradient(45deg, #121212, #181818f0, #0c0d0d);
+    padding-top: 3%;
+    margin-top:-20px;
 }
 .card{
-    box-shadow: 1px 3px 15px #4a4949;
+    border: 1px solid #6b6b6b;
+    background-color: #464646;
+    color: white;
     transition: all 0.5s ease-in-out;
     /* margin: 20px; */
 }
 .card:hover{
-    box-shadow: 1px 3px 20px 3px #ffea00;
+    box-shadow: 0px 0px 10px 0px #777774;
     cursor: pointer;
     transform: scale(1.05);
+}
+
+.card-title{
+    color: rgb(221, 218, 209);
+}
+
+.btnCard{
+    background-color: transparent;
+    color: rgb(255, 230, 0);
+    border: 1px solid rgb(255, 230, 0);
+}
+
+.btn:hover{
+    color: black;
+    background-color: rgba(225, 195, 0, 0.958);
 }
 
 .cardrow{
@@ -76,8 +100,12 @@ section{
 
 /* Info Container starts */
 .infoContainer{
-    background:linear-gradient(20deg, #119689, #0e3c46, #625a31);
-    color: #fff;
+    /* background:linear-gradient(20deg, #119689, #0e3c46, #625a31); */
+    /* background:linear-gradient(35deg, #d4ae00, #ffe014, #ffe014, #daba1a); */
+
+    /* background-color: #2c290a; */
+    background-color: #171300;
+
     min-height: 90vh;
     min-width: 90vw;
     margin: 3%;
@@ -90,7 +118,7 @@ section{
     overflow: hidden;
 }
 #infoPara{
-    background: linear-gradient(-40deg, #545e60, #1b2427, #4b5254);
+    background: linear-gradient(-40deg, #1c1c18, #645b2c, #1f1e18);
     height: 100%;
     width: 100%;
     color: white;
@@ -104,15 +132,9 @@ section{
 }
 
 #infoPic{
-    transition: all 0.5s ease-in-out;
     width: 100%;
 }
-#infoPic:hover{
-    transform: scale(1.1);
-    overflow: hidden;
-    box-shadow: 1px 1px 10px yellow;
-    border-radius: 0px 0px 30px 0px;
-}
+
 .sepDetails{
     display: flex;
     flex-direction: column;
@@ -120,11 +142,133 @@ section{
     align-items: center;
     text-align: center;
     font-size: 1.35rem;
-    text-shadow: 1px 1px 4px  #000000;
-    padding: 5% 3%;
+    /* color: yellow;  */
+    color: white; 
+    /* padding: 5% 3%; */
+    font-weight: bolder;
+}
+
+.infoDetails{
+    align-items: center;
 }
 .sepRow{
     min-height: 37vh;
 }
-
 /* Info Container ends */
+
+
+/* Review Box */
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(128, 128, 128);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight:400;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+.letter{
+    height:3px;
+    width: 3px;
+    top:5px;
+    transform: translate(-8px,-23px);
+}
+
+.FL{
+    color:rgb(255, 230, 0)
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.review:hover{
+    box-shadow: none;
+    cursor: default;
+    transform: none;
+}
+
+.reviewCont{
+    background: linear-gradient(45deg, #121212, #181818f0, #0c0d0d);
+}
+
+.reviewCont h4{
+    color: white;
+}
+
+.review{
+    min-height: 25vh;
+    background-color: #373737;
+    border:none;
+    
+}
+
+.email{
+    margin-top: -20px;
+}
+
+.comments, .email{
+    margin-left: 70px;
+}
+
+.registerNGO{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+.colReg{
+    color: rgb(255, 255, 255);
+    opacity:100%;
+    text-shadow:1px 1px 3px #0c0d0d;
+}
+
+.ngoRow{
+    height: 80%;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow:1px 1px 3px #2e2b1fb3;
+    border: 1px solid #3b3527;
+}
+
+.ngoC{
+    padding-top:10vh;
+}
+
+.regBtnNGO{
+    width: 160px;
+    margin: 10px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid rgb(255, 217, 0);
+    color: rgb(255, 217, 0);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.regBtnNGO:hover{
+    background-color: rgb(255, 217, 0);
+    color: black;
+}
+
+.loginBtnNGO{
+    margin: 10px;
+    width: 160px;
+    height: 50px;
+    background-color: rgb(255, 217, 0);
+    border: 1px solid rgb(255, 217, 0);
+    color:black;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.loginBtnNGO:hover{
+    background-color: rgb(184, 156, 0);
+    border: 1px solid rgb(184, 156, 0);
+    color: black;
+}

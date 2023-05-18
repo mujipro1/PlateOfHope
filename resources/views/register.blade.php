@@ -81,17 +81,16 @@
                                     <!-- make a drop down with all cities list -->
                                     <select class="form-select city-dropdown" name='city'>
                                     </select>
-                                    <!-- get cities values from API with all cities of pakistan -->
+
                                 </div>
 
-                                <div class="salary">
-                                    <div>
+                                <div class="salary"></div>
 
-                                        <div id='availability' class='col-md-12'></div>
+                                    <div id='availability' class='col-md-12'></div>
 
-                                        <div class="d-flex mt-3 justify-content-center" id="button">
-                                            <button type="submit" class="btn btn-primary">Sign Up</button>
-                                        </div>
+                                    <div class="d-flex mt-3 justify-content-center" id="button">
+                                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                                    </div>
                             </form>
                         </div>
                     </div>

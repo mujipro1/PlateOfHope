@@ -33,6 +33,9 @@ navBarCode = `
 footerCode=`
 <div class="footer_left"></div>
 <div class="footer_middle">
+<a href="#"><div class="triangle-up">
+  <i class="fa fa-arrow-up" id="chevron"></i>
+</div></a>
   <div>
     <a href="#" class="fa fa-facebook"></a>
     <a href="#" class="fa fa-twitter"></a>
@@ -42,9 +45,6 @@ footerCode=`
   <p class="footer_text">
     Copyright © 2023 • Don't claim as your own.
   </p>
-  <a href="#"><div class="triangle-up">
-    <i class="fa fa-arrow-up" id="chevron"></i>
-  </div></a>
 </div>
 <div class="footer_left"></div>
 </footer>

@@ -42,6 +42,12 @@
             {{ session('regVolunteer') }}
         </div>
         @endif
+
+        @if(session('regNGO'))
+        <div class="alert alert-success">
+            {{ session('regNGO') }}
+        </div>
+        @endif
         
 
         <div class='container'>
@@ -61,7 +67,7 @@
                         <input name='password' type="password" required>
                         <label for="">Password</label>
                     </div>
-                    <button type='submit' >Log in</button>
+                    <button class="loginbtn"=type='submit' >Log in</button>
                     <div class="register">
                         <p>Don't have an account? <a id="RegLink" href="#">Register</a></p>
                     </div>
@@ -77,38 +83,6 @@
 
 </body>
 <script src="{{asset('js/header.js')}}"></script>
+<script src="{{asset('js/loginHandler.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-
-document.addEventListener('DOMContentLoaded', function() {
-    var errorMessage = document.querySelector('.alert');
-
-    errorMessage.classList.add('show');
-
-    var duration = 3000; 
-    setTimeout(function() {
-        errorMessage.classList.remove('show');
-
-        setTimeout(function() {
-            errorMessage.style.display = 'none';
-        }, 500); 
-    }, duration);
-});
-
-const url = window.location.href.split('/');
-view = url[url.length - 1];
-view = view.replace('#', '');
-document.getElementById(view).classList.add('active');
-form = document.querySelector('.loginForm')
-
-if (view == 'volunteer') {
-    document.getElementById("RegLink").href = "/RegVolunteer";
-    form.innerHTML += `<input type="hidden" name="role" id='role' value='volunteer'>`;
-}
-else if (view == 'assistance') {
-    document.getElementById("RegLink").href = "/RegAssistance";
-    form.innerHTML += `<input type="hidden" name="role" id='role' value='beneficiary'>`;
-}
-</script>
-
 </html>
