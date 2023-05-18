@@ -110,7 +110,10 @@ class NGOController extends Controller
         ->where('donation_id', $donation_id)
         ->get()->first();
 
-        return view('applyfor', compact('id', 'donation', 'selectedCity'));
+        $volEmail = Session::get('volunteer')->email;
+
+        return view('applyfor', compact('id', 'donation', 'selectedCity', 'volEmail'));
 
     }
+
 }

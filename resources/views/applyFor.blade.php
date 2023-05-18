@@ -16,6 +16,15 @@
 
 <body>
 
+        @if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
 
     <div class="c1">
         <img src="{{asset('img/NGOBack1.png')}}" alt="bg" class="bg-img">
@@ -39,22 +48,20 @@
 
                     <div class="col-md-5 ">
                         <header class="text-center">
-                            <h4 class="display-10 text-light">Enter OTP</h5>
+                            <h4 class="display-10 text-light otp-verify d-none">Enter OTP</h5>
                         </header>
 
                         <div class="container w-70 p-2">
-                            <form class="row g-3 p-3" action="{{(route('new-donation'))}}" method="post">
+                            <form action="{{route('VolunteerSuccess')}}" method="post" class="row g-3 p-3">
                                 @CSRF
                                 <div class='col-md-2'></div>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" 
+                                    <input type="text" class="form-control otp-input otp-verify d-none" 
                                     name='volunteers' maxlength="4" placeholder="- - - -">
                                 </div>
                                 <div class='col-md-2'></div>
-
-                                <div class="d-flex mt-4 justify-content-center" id="button">
-                                    <button type="submit" class="sendOTPBtn">Send</button>
-                                </div>
+                                <input hidden name='email' class='email' value='{{$volEmail}}'>
+                                    <button type="submit" class="otp-verify d-none form-control sendOTPBtn">Send</button>
                             </form>
                         </div>
                     </div>
@@ -70,4 +77,5 @@
 
 </body>
 <script src="{{asset('js/header.js')}}"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="{{asset('js/OTP.js')}}"></script>

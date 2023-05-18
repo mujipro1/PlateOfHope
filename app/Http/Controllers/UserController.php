@@ -183,4 +183,36 @@ class UserController extends Controller
 
         return view('assistance', compact('beneficiary','donations', 'selectedCity'));
     }
+
+    public function backToVolunteer(Request $request){
+
+        $optoriginal = $request->input('OPTori');
+        $optinput = $request->input('OPTval');
+
+        if ($optinput === $optoriginal){
+
+            $user = Session::get('volunteer');
+            if (!$user) {
+                return view('login');
+            }
+
+            $volunteer = Volunteer::where('email', $user->email)->first();
+            $selectedCity = $volunteer->city;
+            
+            // find ngos whose city matches with the logged in volunteer's city
+            $donations = DB::table('donation')
+            ->join('ngo', 'donation.ngo_id', '=', 'ngo.ngo_id')
+            ->select('donation.*', 'ngo.name as ngo_name', 
+            'ngo.image as image', 'ngo.contact as contact',
+            'ngo.description as description')
+            ->where('donation.city', $selectedCity)
+            ->get();
+
+            return view('volunteer', compact('volunteer', 'donations', 'selectedCity'));
+        }
+        else{
+            return redirect()->back()->withInput()->withErrors('Invalid OTP');
+        }
+    
+    }
 }

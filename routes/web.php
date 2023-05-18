@@ -60,4 +60,5 @@ Route::post('/cityNGOsV', 'App\Http\Controllers\UserController@updateCityV')->na
 Route::post('/cityNGOsA', 'App\Http\Controllers\UserController@updateCityA')->name('cityNGOsA');
 
 
-Route::post('/applyfor', 'App\Http\Controllers\NGOController@applyFor')->name('applyFor');
+Route::post('/applyfor', 'App\Http\Controllers\NGOController@applyFor')->name('applyfor');
+Route::post('/VolunteerSuccess', 'App\Http\Controllers\UserController@backToVolunteer')->name('VolunteerSuccess');

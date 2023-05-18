@@ -85,7 +85,7 @@
                                     </p>
                                     <h5>+{{ $donation->contact }}</h5>
                                     <p><strong></strong></p>
-                                    <form action="applyfor" method='post'>
+                                    <form action="{{route('applyfor')}}" method='post'>
                                         @CSRF
                                         <input hidden value="{{$selectedCity}}" name='city'>
                                         <input hidden value="{{$donation->donation_id}}" name='name'>
