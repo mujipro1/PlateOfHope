@@ -1,4 +1,4 @@
-<p align="center"># Plate of Hope</p>
+<p align="center"><h1>Plate of Hope</h1></p>
 
 ![image](https://github.com/mujipro1/PlateOfHope/assets/116620251/b6106f3e-db7a-49d9-9185-941ba8e47688)
 
