@@ -1,6 +1,6 @@
 # Plate of Hope
 
-![image](https://github.com/mujipro1/PlateOfHope/assets/116620251/35400dec-083c-4fb6-a17b-c2d82fd9ebe2)
+![image](https://github.com/mujipro1/PlateOfHope/assets/116620251/8ee84e43-c7eb-4d81-9fd4-c8f484ed0c5a)
 
 Plate of Hope is a web platform aimed at connecting food NGOs with people in need. It facilitates the process of donating food and resources to those who require assistance. The platform allows NGOs to register donations, specify donation areas, and enables beneficiaries to view available donation time slots. Additionally, users can volunteer during donation events, making it a community-driven initiative.
 
