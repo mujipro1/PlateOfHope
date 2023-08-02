@@ -1,64 +1,70 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"># Plate of Hope</p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![image](https://github.com/mujipro1/PlateOfHope/assets/116620251/ebc1d83a-fdd0-445a-b588-01ca2e36e2a5)
 
-## About Laravel
+Plate of Hope is a web platform aimed at connecting food NGOs with people in need. It facilitates the process of donating food and resources to those who require assistance. The platform allows NGOs to register donations, specify donation areas, and enables beneficiaries to view available donation time slots. Additionally, users can volunteer during donation events, making it a community-driven initiative.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Seamless connection between food NGOs and beneficiaries.
+- Donation scheduling and area specification by NGOs.
+- View available donation time slots for beneficiaries.
+- Volunteer opportunities during donation events.
+- Interactive map integration for easy location-based interactions.
+- OTP verification for secure user registration and login.
 
-## Learning Laravel
+## Technologies Used
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Laravel framework for robust web application development.
+- Bootstrap for responsive and modern user interface design.
+- Map integration using XYZ Maps API (or any relevant map API).
+- OTP verification using SMS gateways.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Installation
 
-## Laravel Sponsors
+1. Clone this repository to your local machine:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+   ```sh
+   git clone https://github.com/mujipro1/PlateOfHope.git
+   ```
 
-### Premium Partners
+2. Navigate to the project directory:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+   ```sh
+   cd PlateOfHope
+   ```
 
-## Contributing
+3. Install required dependencies using Composer:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+   ```sh
+   composer install
+   ```
 
-## Code of Conduct
+4. Create a `.env` file by copying from `.env.example`:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+   ```sh
+   cp .env.example .env
+   ```
 
-## Security Vulnerabilities
+5. Configure the `.env` file with your database, map API, and SMS gateway details.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+6. Start the development server:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+   ```sh
+   php artisan serve
+   ```
+
+## Usage
+
+1. Register as an NGO, beneficiary, or volunteer using OTP verification.
+2. NGOs can register donations, specifying donation areas and time slots.
+3. Beneficiaries can view available donation time slots and register for donations.
+4. Volunteers can sign up for volunteering opportunities during donation events.
+5. Interact with the integrated map to explore donation areas.
+6. Stay connected with real-time updates on donation events and volunteer opportunities.
+
+## Acknowledgments
+
+- The concept and design of Plate of Hope were inspired by the desire to bridge the gap between food surplus and those in need.
